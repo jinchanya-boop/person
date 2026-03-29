@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กลุ่มบริหารงานบุคคล - โรงเรียนสา</title>
+  <style>
+    /* นำเข้าฟอนต์ภาษาไทย */
+    @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
+
+    .main-wrapper {
+      font-family: 'Sarabun', sans-serif;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    .header-section {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .school-logo {
+      height: 90px;
+      width: auto;
+      margin-bottom: 15px;
+    }
+
+    .header-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin: 0 0 5px 0;
+    }
+
+    .header-section p {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+      margin: 0;
+    }
+    
+    .instruction-container {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .instruction-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-style: italic;
+      color: #95a5a6;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card-link {
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      width: 260px;
+      padding: 25px;
+      text-align: center;
+      text-decoration: none;
+      color: #34495e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-link:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    /* โทนสีสำหรับการ์ดงานบุคคล */
+    .color-1 { background-color: #E8EAF6; } /* Indigo Light */
+    .color-2 { background-color: #E1F5FE; } /* Light Blue */
+    .color-3 { background-color: #E0F2F1; } /* Teal Light */
+    .color-4 { background-color: #FFFDE7; } /* Yellow Light */
+    .color-5 { background-color: #F3E5F5; } /* Purple Light */
+    .color-6 { background-color: #FBE9E7; } /* Deep Orange Light */
+    .color-7 { background-color: #ECEFF1; } /* Blue Grey Light */
+
+    .card-icon {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .page-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+      color: #95a5a6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-wrapper">
+
+  <div class="header-section">
+    <img src="https://img2.pic.in.th/pic/sa1770b9ce234fe5584.png" alt="โลโก้โรงเรียน" class="school-logo">
+    <h1>กลุ่มบริหารงานบุคคล</h1>
+    <p>Online Personnel Management System</p>
+  </div>
+  
+  <div class="instruction-container">
+      <div class="instruction-text">
+        <span>👉</span>
+        <span>คลิกเลือกรายการที่ต้องการดำเนินการ</span>
+      </div>
+  </div>
+  
+  <div class="card-container">
+    <a href="https://sites.google.com/saschool.ac.th/pasa/person" class="card-link color-1" target="_blank">
+      <div class="card-icon">📂</div>
+      <h3 class="card-title">งาน PA</h3>
+    </a>
+
+    <a href="https://sites.google.com/saschool.ac.th/pasa/PA1" class="card-link color-2" target="_blank">
+      <div class="card-icon">📄</div>
+      <h3 class="card-title">ระบบส่งงาน PA1</h3>
+    </a>
+
+    <a href="https://sites.google.com/saschool.ac.th/pasa/PA3-2568" class="card-link color-3" target="_blank">
+      <div class="card-icon">📑</div>
+      <h3 class="card-title">ระบบส่งงาน PA3</h3>
+    </a>
+
+    <a href="https://jinchanya-boop.github.io/Issue/" class="card-link color-4" target="_blank">
+      <div class="card-icon">🚀</div>
+      <h3 class="card-title">รายงานประเด็นท้าทาย</h3>
+    </a>
+
+    <a href="https://jinchanya-boop.github.io/IDplan/" class="card-link color-5" target="_blank">
+      <div class="card-icon">👤</div>
+      <h3 class="card-title">งาน ID Plan</h3>
+    </a>
+
+    <a href="https://sites.google.com/saschool.ac.th/pasa/Leave-letter" class="card-link color-6" target="_blank">
+      <div class="card-icon">✉️</div>
+      <h3 class="card-title">ใบลาออนไลน์</h3>
+    </a>
+
+    <a href="https://script.google.com/a/macros/saschool.ac.th/s/AKfycbzmhiD3AmQidt4H_NcFLiscVyXuPQhLe3LLaG6ZP_chboxoihAoc8brGilRD0flsTpV/exec" class="card-link color-7" target="_blank">
+      <div class="card-icon">📅</div>
+      <h3 class="card-title">ปฏิทินปฏิบัติงาน</h3>
+    </a>
+  </div>
+  
+  <footer class="page-footer">
+    <p>[กลุ่มบริหารงานบุคคล โรงเรียนสา] (saschool.ac.th) [054-718546]</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
