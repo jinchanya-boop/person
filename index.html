@@ -8,11 +8,17 @@
     /* นำเข้าฟอนต์ภาษาไทย */
     @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap');
 
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
     .main-wrapper {
       font-family: 'Sarabun', sans-serif;
       max-width: 1200px;
       margin: auto;
-      padding: 20px;
+      padding: 15px;
     }
     
     .header-section {
@@ -20,30 +26,33 @@
       margin-bottom: 20px;
       padding-bottom: 20px;
       border-bottom: 1px solid #e0e0e0;
+      background-color: white;
+      border-radius: 0 0 20px 20px;
     }
     
     .school-logo {
-      height: 90px;
+      height: 80px;
       width: auto;
       margin-bottom: 15px;
     }
 
     .header-section h1 {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #2c3e50;
       margin: 0 0 5px 0;
+      line-height: 1.2;
     }
 
     .header-section p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #7f8c8d;
       margin: 0;
     }
     
     .instruction-container {
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
 
     .instruction-text {
@@ -52,59 +61,101 @@
       gap: 10px;
       font-style: italic;
       color: #95a5a6;
+      font-size: 0.9rem;
     }
 
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 15px;
     }
 
     .card-link {
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-      width: 260px;
-      padding: 25px;
+      width: 100%;
+      max-width: 280px;
+      padding: 20px;
       text-align: center;
       text-decoration: none;
       color: #34495e;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      background-color: white;
     }
 
-    .card-link:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    /* เอฟเฟกต์ Pulse สำหรับเมนูที่ต้องการให้โดดเด่น */
+    @keyframes pulse-animation {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
 
-    /* โทนสีสำหรับการ์ดงานบุคคล */
-    .color-1 { background-color: #E8EAF6; } /* Indigo Light */
-    .color-2 { background-color: #E1F5FE; } /* Light Blue */
-    .color-3 { background-color: #E0F2F1; } /* Teal Light */
-    .color-4 { background-color: #FFFDE7; } /* Yellow Light */
-    .color-5 { background-color: #F3E5F5; } /* Purple Light */
-    .color-6 { background-color: #FBE9E7; } /* Deep Orange Light */
-    .color-7 { background-color: #ECEFF1; } /* Blue Grey Light */
+    .card-featured {
+      background: linear-gradient(135deg, #fff9e6 0%, #ffecb3 100%);
+      border: 2px solid #ffd54f;
+      animation: pulse-animation 2s infinite ease-in-out;
+      position: relative;
+    }
+
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff5722;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+      .card-link:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+      }
+      .header-section h1 { font-size: 2.5rem; }
+      .school-logo { height: 100px; }
+    }
+
+    /* โทนสี */
+    .color-1 { background-color: #E8EAF6; }
+    .color-2 { background-color: #E1F5FE; }
+    .color-3 { background-color: #E0F2F1; }
+    .color-4 { background-color: #FFFDE7; }
+    .color-5 { background-color: #F3E5F5; }
+    .color-6 { background-color: #FBE9E7; }
+    .color-7 { background-color: #ECEFF1; }
 
     .card-icon {
-      font-size: 4rem;
-      margin-bottom: 15px;
+      font-size: 3.5rem;
+      margin-bottom: 10px;
       line-height: 1;
     }
 
     .card-title {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 700;
       margin: 0;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: #d88e00;
+      margin-top: 5px;
+      font-weight: bold;
     }
     
     .page-footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 40px;
       padding-top: 20px;
       border-top: 1px solid #e0e0e0;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       color: #95a5a6;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -121,11 +172,20 @@
   <div class="instruction-container">
       <div class="instruction-text">
         <span>👉</span>
-        <span>คลิกเลือกรายการที่ต้องการดำเนินการ</span>
+        <span>แตะเพื่อเลือกรายการที่ต้องการ</span>
       </div>
   </div>
   
   <div class="card-container">
+    <!-- เมนูแนะนำพิเศษ: SA Smart -->
+    <a href="https://jinchanyas-glide-big-5qv5.glide.page" class="card-link card-featured" target="_blank">
+      <span class="badge-new">NEW</span>
+      <div class="card-icon">📱</div>
+      <h3 class="card-title">SA Smart</h3>
+      <div class="card-subtitle">✨ คลิกติดตั้งแอปที่นี่ ✨</div>
+    </a>
+
+    <!-- รายการปกติ -->
     <a href="https://sites.google.com/saschool.ac.th/pasa/person" class="card-link color-1" target="_blank">
       <div class="card-icon">📂</div>
       <h3 class="card-title">งาน PA</h3>
@@ -163,7 +223,7 @@
   </div>
   
   <footer class="page-footer">
-    <p>[กลุ่มบริหารงานบุคคล โรงเรียนสา] (saschool.ac.th) [054-718546]</p>
+    <p>[กลุ่มบริหารงานบุคคล โรงเรียนสา]<br>(saschool.ac.th) | โทร: 054-718546</p>
   </footer>
 
 </div>
