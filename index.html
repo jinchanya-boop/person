@@ -111,6 +111,51 @@
       font-weight: bold;
     }
 
+    /* เอฟเฟกต์พิเศษสุด สำหรับเมนู "ส่งรายงานการพัฒนาตนเอง" ให้เด่นกว่าเมนู featured ทั่วไป */
+    @keyframes super-glow {
+      0%, 100% {
+        box-shadow: 0 0 8px rgba(46, 204, 113, 0.5), 0 0 0 0 rgba(46, 204, 113, 0.4);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(46, 204, 113, 0.9), 0 0 0 10px rgba(46, 204, 113, 0);
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes border-rotate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card-super-featured {
+      background: linear-gradient(135deg, #e8fff3 0%, #d4f8e8 50%, #e8fff3 100%);
+      background-size: 200% 200%;
+      border: 3px solid transparent;
+      background-image: linear-gradient(135deg, #e8fff3 0%, #d4f8e8 50%, #e8fff3 100%),
+                         linear-gradient(90deg, #2ecc71, #f1c40f, #2ecc71);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      animation: super-glow 1.6s infinite ease-in-out, border-rotate 3s linear infinite;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-hot {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: linear-gradient(135deg, #ff5722, #e91e63);
+      color: white;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(233, 30, 99, 0.5);
+      transform: rotate(8deg);
+    }
+
     @media (min-width: 768px) {
       .card-link:hover {
         transform: translateY(-8px);
@@ -185,6 +230,14 @@
       <div class="card-icon">📱</div>
       <h3 class="card-title">SA Smart</h3>
       <div class="card-subtitle">✨ คลิกติดตั้งแอปที่นี่ ✨</div>
+    </a>
+
+    <!-- เมนูเด่นที่สุด: ส่งรายงานการพัฒนาตนเอง -->
+    <a href="https://script.google.com/macros/s/AKfycbx1h0E4MR1-jqbxsBpnb2yYe3Zv6A11K7pzyTic2wLpHckRKaBggsFwAour0lhOT2FU/exec" class="card-link card-super-featured" target="_blank">
+      <span class="badge-hot">🔥 ด่วน</span>
+      <div class="card-icon">📈</div>
+      <h3 class="card-title">ส่งรายงานการพัฒนาตนเอง</h3>
+      <div class="card-subtitle">✅ คลิกส่งรายงานที่นี่</div>
     </a>
 
     <!-- เมนูใหม่: ระบบขอเลขที่บันทึกข้อความ (วางถัดจาก SA Smart) -->
