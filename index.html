@@ -71,6 +71,13 @@
       gap: 15px;
     }
 
+    /* บังคับขึ้นบรรทัดใหม่ใน flex (แถวบนมี 2 การ์ด) */
+    .row-break {
+      flex-basis: 100%;
+      height: 0;
+      margin-top: -15px; /* หักล้างช่องว่าง gap ส่วนเกินที่เกิดจากแถวว่าง */
+    }
+
     .card-link {
       border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -228,6 +235,14 @@
       margin: 0;
     }
 
+    .card-scope {
+      font-size: 0.72rem;
+      color: #8d6e63;
+      margin-top: 6px;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
     .card-subtitle {
       font-size: 0.8rem;
       color: #d88e00;
@@ -272,21 +287,17 @@
       <div class="card-subtitle">✨ คลิกติดตั้งแอปที่นี่ ✨</div>
     </a>
 
-    <!-- เมนูอันดับ 2: ระบบส่งรายงานนวัตกรรม/Best Practice/PA1/PA3 -->
-    <a href="http://inno.saschool.ac.th" class="card-link card-ultra-featured" target="_blank">
+    <!-- เมนูอันดับ 2: ระบบบริหารผลงานและวิทยฐานะครู (รวมนวัตกรรม/Best Practice/PA1/PA3/รายงานการพัฒนาตนเอง/ID Plan) -->
+    <a href="https://inno.saschool.ac.th/" class="card-link card-ultra-featured" target="_blank">
       <span class="badge-ultra">⭐ ต้องส่ง!</span>
       <div class="card-icon">🏆</div>
-      <h3 class="card-title">ระบบส่งรายงานนวัตกรรม/<br>Best Practice / PA1 / PA3</h3>
-      <div class="card-subtitle">🎯 คลิกส่งรายงานที่นี่</div>
+      <h3 class="card-title">ระบบบริหารผลงาน<br>และวิทยฐานะครู</h3>
+      <div class="card-scope">รายงานนวัตกรรม · Best Practice · PA1 · PA3<br>รายงานการพัฒนาตนเอง · ID Plan</div>
+      <div class="card-subtitle">🎯 คลิกเข้าสู่ระบบที่นี่</div>
     </a>
 
-    <!-- เมนูเด่นที่สุด: ส่งรายงานการพัฒนาตนเอง -->
-    <a href="https://script.google.com/a/macros/saschool.ac.th/s/AKfycbx1h0E4MR1-jqbxsBpnb2yYe3Zv6A11K7pzyTic2wLpHckRKaBggsFwAour0lhOT2FU/exec" class="card-link card-super-featured" target="_blank">
-      <span class="badge-hot">🔥 ด่วน</span>
-      <div class="card-icon">📈</div>
-      <h3 class="card-title">ส่งรายงานการพัฒนาตนเอง</h3>
-      <div class="card-subtitle">✅ คลิกส่งรายงานที่นี่</div>
-    </a>
+    <!-- ตัวขึ้นบรรทัดใหม่: ให้แถวบนมีแค่ 2 การ์ด -->
+    <div class="row-break"></div>
 
     <!-- เมนูใหม่: ระบบขอเลขที่บันทึกข้อความ (วางถัดจาก SA Smart) -->
     <a href="https://jinchanya-boop.github.io/memo/" class="card-link color-8" target="_blank">
@@ -303,11 +314,6 @@
     <a href="https://jinchanya-boop.github.io/Issue/" class="card-link color-4" target="_blank">
       <div class="card-icon">🚀</div>
       <h3 class="card-title">รายงานประเด็นท้าทาย</h3>
-    </a>
-
-    <a href="https://jinchanya-boop.github.io/IDplan/" class="card-link color-5" target="_blank">
-      <div class="card-icon">👤</div>
-      <h3 class="card-title">ส่ง ID Plan</h3>
     </a>
 
     <a href="https://script.google.com/a/macros/saschool.ac.th/s/AKfycbxZXRIXQCXiJ1lo_EfGlgkuij0qnyZXajT8vxtaIvktGlg660HUArIgBZvFUu2FvRwL/exec" class="card-link color-7" target="_blank">
